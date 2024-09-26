@@ -4,7 +4,7 @@ from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
 import threading
 import time
-#from API import sum1, prod1
+
 
 app = Flask(__name__) #Flask va a ser el servidor de mi API
 
@@ -76,5 +76,5 @@ if __name__ == '__main__':
     data_thread.daemon = True  # Hilo en segundo plano
     data_thread.start()
 
-    app.run(host="0.0.0.0",port=4000, debug=True)
-    #app.run(port=4000, debug=True)
+    #app.run(host="0.0.0.0",port=4000, debug=True)
+    app.run(port=4000, debug=True)
