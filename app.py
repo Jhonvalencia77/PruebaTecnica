@@ -38,6 +38,7 @@ def fetch_data():
 
 @app.route('/', methods=['GET'])
 def index():
+    fetch_data()  # Obtener los datos antes de renderizar la página
     return render_template('index.html', data=dataBitCoin['data']) #accedemos a la clave "data" del diccionar
 
 # Ruta para actualizar datos mediante PUT
